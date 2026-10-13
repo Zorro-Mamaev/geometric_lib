@@ -29,6 +29,6 @@ def perimeter(r):
         circle_perimeter (float): длина окружности с радиусом r 
     '''
 
-    circle_perimeter = math.pi * r * r
+    circle_perimeter = math.pi * r * 2
     return circle_perimeter
 
