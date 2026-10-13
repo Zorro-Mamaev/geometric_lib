@@ -22,3 +22,13 @@ class RectangleTests(unittest.TestCase):
     #тест на работу функции нахождения периметра прямоугольника с вещественными параметрами
     def test_perimeter_float(self):
         self.assertAlmostEqual(perimeter(a = 7, b = 4.5), 23)
+
+    #негативный тест на направильных входных данных для площади
+    def test_area_wrong_data(self):
+        with self.essertRaises(ValueError):
+            area(-5, -6)
+
+    #негативный тест на направильных входных данных для площади
+    def test_perimeter_wrong_data(self):
+            with self.essertRaises(ValueError):
+                perimeter(-5, -6)

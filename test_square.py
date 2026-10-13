@@ -22,4 +22,13 @@ class SquareTests(unittest.TestCase):
     #тест на работу функции нахождения периметра квадрата с вещественным параметром
     def test_perimeter_float(self):
         self.assertAlmostEqual(perimeter(a = 4.5), 18)
-        
+
+    #негативный тест на направильных входных данных для площади
+    def test_area_wrong_data(self):
+        with self.essertRaises(ValueError):
+            area(-5)
+
+    #негативный тест на направильных входных данных для площади
+    def test_perimeter_wrong_data(self):
+            with self.essertRaises(ValueError):
+                perimeter(-5)
