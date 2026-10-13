@@ -1,9 +1,8 @@
 import unittest
 import math
-from triangle import area, perimeter
+from circle import area, perimeter
 
-
-class TriangleTests(unittest.TestCase):
+class CircleTests(unittest.TestCase):
     #тест на работу функции нахождения площади круга с целочисленными параметрами
     def test_area(self): 
         self.assertAlmostEqual(area(r = 2), math.pi * 4)
@@ -26,10 +25,10 @@ class TriangleTests(unittest.TestCase):
 
     #негативный тест на неправильных входных данных для площади
     def test_area_wrong_data(self):
-        with self.essertRaises(ValueError):
+        with self.assertRaises(ValueError):
             area(r = -6)
 
     #негативный тест на неправильных входных данных для периметра
     def test_perimeter_wrong_data(self):
-            with self.essertRaises(ValueError):
+            with self.assertRaises(ValueError):
                 perimeter(r = -5)
