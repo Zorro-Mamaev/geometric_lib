@@ -25,10 +25,10 @@ class SquareTests(unittest.TestCase):
 
     #негативный тест на неправильных входных данных для площади
     def test_area_wrong_data(self):
-        with self.essertRaises(ValueError):
+        with self.assertRaises(ValueError):
             area(-5)
 
     #негативный тест на неправильных входных данных для периметра
     def test_perimeter_wrong_data(self):
-            with self.essertRaises(ValueError):
+            with self.assertRaises(ValueError):
                 perimeter(-5)

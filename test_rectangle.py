@@ -25,10 +25,10 @@ class RectangleTests(unittest.TestCase):
 
     #негативный тест на направильных входных данных для площади
     def test_area_wrong_data(self):
-        with self.essertRaises(ValueError):
+        with self.assertRaises(ValueError):
             area(-5, -6)
 
     #негативный тест на направильных входных данных для периметра
     def test_perimeter_wrong_data(self):
-            with self.essertRaises(ValueError):
+            with self.assertRaises(ValueError):
                 perimeter(-5, -6)

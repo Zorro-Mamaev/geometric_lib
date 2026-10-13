@@ -25,11 +25,14 @@ class TriangleTests(unittest.TestCase):
 
     #негативный тест на неправильных входных данных для площади
     def test_area_wrong_data(self):
-        with self.essertRaises(ValueError):
+        with self.assertRaises(ValueError):
             area(a = -6, h = 4)
 
     #негативный тест на неправильных входных данных для периметра
     def test_perimeter_wrong_data(self):
-            with self.essertRaises(ValueError):
-                perimeter(a = -5, b = -4, c = -3)
+        with self.assertRaises(ValueError):
+            perimeter(a = -5, b = -4, c = -3)
 
+    def test_perimeter_not_triangle(self):
+            with self.assertRaises(ValueError):
+                perimeter(a = 1, b = 2, c = 1000)
