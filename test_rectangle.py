@@ -9,7 +9,7 @@ class RectangleTests(unittest.TestCase):
 
     #тест на работу функции нахождения площади прямоугольника с вещественными параметрами
     def test_area_float(self):
-        self.assertEqual(area(a = 4, b = 2.5), 10)
+        self.assertAlmostEqual(area(a = 4, b = 2.5), 10)
 
     #тест на работу функции нахождения площади прямоугольника с одним из параметров равным 0
     def test_area_zero(self):
@@ -21,4 +21,4 @@ class RectangleTests(unittest.TestCase):
 
     #тест на работу функции нахождения периметра прямоугольника с вещественными параметрами
     def test_perimeter_float(self):
-        self.assertEqual(perimeter(a = 7, b = 4.5), 23)
+        self.assertAlmostEqual(perimeter(a = 7, b = 4.5), 23)
